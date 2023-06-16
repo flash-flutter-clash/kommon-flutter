@@ -1,12 +1,13 @@
 import 'dart:convert';
-import 'package:dio/adapter.dart';
+
 import 'package:dio/dio.dart';
+
 import 'interceptors/log_interceptor.dart';
 
 Dio _initDio({String? baseUrl, int timeoutMs = 10000}) {
   BaseOptions baseOpts = BaseOptions(
     baseUrl: baseUrl ?? '',
-    connectTimeout: timeoutMs, // 连接服务器超时时间，单位是毫秒
+    connectTimeout: Duration(milliseconds: timeoutMs), // 连接服务器超时时间，单位是毫秒
     responseType: ResponseType.plain, // 数据类型
     receiveDataWhenStatusError: true,
   );
