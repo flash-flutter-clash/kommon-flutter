@@ -21,6 +21,7 @@ dependencies:
   bruno:
     git:
       url: https://github.com/BingKui/bruno.git
+      ref: 3.x
   fl_chart: ^0.55.0
   get: ^4.6.1
   getwidget: ^3.0.1
