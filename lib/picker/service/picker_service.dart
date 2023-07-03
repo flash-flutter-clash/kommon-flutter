@@ -1,4 +1,4 @@
-import 'package:file_picker/file_picker.dart';
+// import 'package:file_picker/file_picker.dart';
 import 'package:get/get.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:kommon/cache/service/cache_service.dart';
@@ -91,17 +91,17 @@ class PickerService extends GetxService {
   }
 
   /// 目前仅支持mp3试试
-  Future<String?> pickAudio({List<String>? exts}) async {
-    final result = await FilePicker.platform.pickFiles(
-        type: exts == null ? FileType.audio : FileType.custom,
-        allowCompression: true,
-        allowedExtensions: exts);
-    if (result == null) {
-      return null;
-    }
-    final f = result.files.first;
-    return f.path;
-  }
+  // Future<String?> pickAudio({List<String>? exts}) async {
+  //   final result = await FilePicker.platform.pickFiles(
+  //       type: exts == null ? FileType.audio : FileType.custom,
+  //       allowCompression: true,
+  //       allowedExtensions: exts);
+  //   if (result == null) {
+  //     return null;
+  //   }
+  //   final f = result.files.first;
+  //   return f.path;
+  // }
 
   Future<PickerService> init() async {
     return this;
